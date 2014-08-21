@@ -64,7 +64,7 @@ void mergesort(item_type* s, size_t low, size_t high)
 	}
 }
 
-void merge(item_type*s, size_t low, size_t middle, size_t high)
+void merge(item_type* s, size_t low, size_t middle, size_t high)
 {
 	std::queue<item_type> buffer1, buffer2;
 	// having queue to hold element for merging
