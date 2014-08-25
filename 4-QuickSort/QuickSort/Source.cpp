@@ -91,3 +91,17 @@ int partition(item_type *s, int l, int h)
 	// the pivot location is the bar location after we swap
 	return l;
 }
+
+/*
+	partition takes n times most, what's the sorting time?
+	it's n*h where h is the height
+	if each time we take the median, it's going to be
+	nlog(n). since height is log
+	however, if each time we always pick the ending one 
+	largest or smallest in the sequence, we have to make
+	n-1=h, hence worst case is n**2
+	
+	NOTE: quicksort has worse worst case, than heapsort and mergesort
+	n**2 comparing to nlogn. but the average expect speed of mergesort
+	is better
+*/

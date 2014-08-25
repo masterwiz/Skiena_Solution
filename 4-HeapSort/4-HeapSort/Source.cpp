@@ -238,6 +238,8 @@ int heap_compare(priority_queue *q, int i, int count, int x)
 		// priviously already count-1, we don't have to do it again
 		// cuz count is shared across the recursion
 		// as return value
+		// passing previous count to this count
+		// getting new count
 		count = heap_compare(q, pq_young_child(i) + 1, count, x);
 	}
 	// in the end

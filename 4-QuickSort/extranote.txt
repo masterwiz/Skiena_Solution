@@ -1,0 +1,39 @@
+why expect case is better for quicksort?
+
+suppose a pivot is good enough is we have 1/2 chance
+to select it closer to the actual median (which is the best case)
+where it is close to taking half at a time like a tree
+say we select anywhere between 1/4 loc to 3/4 loc
+say we always at the edge 3/4, that means three size is 
+n*(3/4)**height=1, height ~ logn
+
+since we expect half good pivot half bad
+and that extreme bad means we do nothing at all,
+the total means double the good big-O
+we still have logn
+
+hence the average total is nlogn. 
+
+a closer study showed any random insertion sorting vs balanced tree
+is ~1.3 higher, approximately 2ln(n) ~ 1.3log(n). 
+average is nlogn, worst unlucky is n**2
+
+==================
+the worst case is that if data is sorted, each time last is at end
+giving us n**2. however, if the data is random ordered, 
+we have a high probability that of nlogn
+
+now think this, we can permutation the list to be random regardless
+it's original form, and we can do it in O(n). thus, 
+we guarantee a nlogn running time. the worse case is extremely unlikely. 
+
+alternatively, we can select a random pivot everytime instead of last
+just remember to switch it with last before iteration
+
+==================
+randomization is powerful to improve algo with bad worst case 
+but good average case. 
+additional topic about how to randomlize
+* true random sampling, not sampling what you see. 
+* randomized hashing. hashing has expet O(1) dictionary operation. we have to randomly select hash function to avoid possible worst case
+* random search
