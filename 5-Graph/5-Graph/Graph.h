@@ -29,6 +29,7 @@ struct graph
 void initialize_graph(graph *g, bool directed);
 void read_graph(graph *g, bool directed);
 void insert_edge(graph *g, int x, int y, bool directed);
+void print_graph(graph *g);
 
 
 void initialize_graph(graph *g, bool directed)
@@ -108,9 +109,4 @@ void print_graph(graph *g)
 			p = p->next;
 		}
 	}
-}
-
-int main()
-{
-	return 0;
 }
